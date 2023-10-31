@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-vby+-p#n6)ri0b8x=66@+u2%6df4q_h3hbiw_o@d5y4+k84jv$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -133,4 +133,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIR = [BASE_DIR / 'static']
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')

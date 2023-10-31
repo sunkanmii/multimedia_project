@@ -1,5 +1,5 @@
 env
-projectg/_pychache_
+projectg/__pycache__
 projectg/.env
-projectgapp/_pychache_
+projectgapp/__pycache__
 .vercel
