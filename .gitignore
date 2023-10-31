@@ -2,3 +2,4 @@ env
 projectg/_pychache_
 projectg/.env
 projectgapp/_pychache_
+.vercel
